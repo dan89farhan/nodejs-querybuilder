@@ -1,6 +1,6 @@
 {
   "name": "nodejs-querybuilder",
-  "version": "1.0.2-0",
+  "version": "1.0.3-0",
   "description": "It is a library to generate the query builder for sql queries.",
   "main": "index.js",
   "scripts": {
