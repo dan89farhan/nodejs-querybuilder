@@ -1,5 +1,5 @@
 'user strict';
-var sql = require('../configs/dbConfig');
+var sql = require('./src/db/dbconfig');
 let queryBuilder = function () {
     let _query = '';
     let _whereColumns = [];
