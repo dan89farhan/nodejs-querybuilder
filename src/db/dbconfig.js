@@ -1,14 +1,28 @@
 'user strict';
 
 var mysql = require('mysql');
-require('dotenv').config();
+// require('dotenv').config();
 
-var connection = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_DATABASE,
-});
+var connection = function (host, user, password, database) {
+    return mysql.createPool({
+        host: host,
+        user: user,
+        password: password,
+        database: database,
+    });
+};
+// var connection = mysql.createPool({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASS,
+//     database: process.env.DB_DATABASE,
+// });
+// var connection = mysql.createPool({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASS,
+//     database: process.env.DB_DATABASE,
+// });
 
 module.exports = connection;
 

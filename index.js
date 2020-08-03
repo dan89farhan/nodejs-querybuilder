@@ -77,7 +77,7 @@ let queryBuilder = function () {
         },
         run: function (query = null) {
             return new Promise((resolve, reject) => {
-                sql.getConnection(function (err, conn) {
+                sql().getConnection(function (err, conn) {
                     if (err) {
                         conn.release();
                         reject(err)
