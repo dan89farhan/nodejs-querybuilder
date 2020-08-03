@@ -1,9 +1,15 @@
 'user strict';
 var sql = require('./src/db/dbconfig');
+const connection = require('./src/db/dbconfig');
 let queryBuilder = function () {
     let _query = '';
     let _whereColumns = [];
+    let _connection = null;
     return {
+        setConfig: function(host, user, password, database){
+            _connection = sql(host, user, password, database);
+            return this;
+        },
         select: function (selectColumns = '*') {
             _query = _query + `SELECT ${selectColumns} from`;
             return this;
@@ -77,7 +83,7 @@ let queryBuilder = function () {
         },
         run: function (query = null) {
             return new Promise((resolve, reject) => {
-                sql().getConnection(function (err, conn) {
+                _connection().getConnection(function (err, conn) {
                     if (err) {
                         conn.release();
                         reject(err)
