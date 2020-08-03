@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-querybuilder",
+  "version": "1.0.0",
+  "description": "It is a library to generate the query builder for sql queries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "query",
+    "builder",
+    "query",
+    "sql"
+  ],
+  "author": "Farhan M.Baig",
+  "license": "ISC"
+}
