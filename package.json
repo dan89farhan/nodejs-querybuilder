@@ -4,7 +4,7 @@
   "description": "It is a library to generate the query builder for sql queries.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"No test specified\""
   },
   "keywords": [
     "query",
