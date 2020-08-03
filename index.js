@@ -83,7 +83,7 @@ let queryBuilder = function () {
         },
         run: function (query = null) {
             return new Promise((resolve, reject) => {
-                _connection().getConnection(function (err, conn) {
+                _connection.getConnection(function (err, conn) {
                     if (err) {
                         conn.release();
                         reject(err)
